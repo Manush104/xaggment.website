@@ -13,7 +13,7 @@ const App: React.FC = () => {
     const [loading, setLoading] = useState(true);
 
     return (
-        <Router>
+        <Router basename="/xaggment.website">
             {loading && <Loader onComplete={() => setLoading(false)} />}
             <IntersectObserver />
             <div className={`flex flex-col min-h-screen ${loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-1000'}`}>
